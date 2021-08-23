@@ -1,0 +1,62 @@
+.name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+li {
+  list-style-type: none;
+  margin: 15px 0 5px 35px; 
+}
+
+.text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.name::before {
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  text-align: center;
+  content: '"';
+  color: #000;
+  background-color: #0ff;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: 800;
+}
+
+.name-string::before {
+  content: '"';
+  color: #000;
+  background-color: #FFE177;
+}
+
+.name-number::before {
+  content: '#';
+  background-color: #0ff;
+}
+
+.name-boolean::before {
+  content: 'tf';
+  background-color: #B1C7FF;
+}
+
+.string {
+  color: #FFE177;
+}
+
+.boolean {
+  color: #B1C7FF;
+}
+
+.number {
+  color: #1CDDB4;
+}
+
