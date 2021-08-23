@@ -3,9 +3,10 @@
 
 </br>
 
-<p>Implement a simple IP geolocation app. Using a React, React Hooks, Flexbox<p>
+<p>Implement a simple IP geolocation app. Using a React, React Hooks, Flexbox, promises.<p>
 
 </br>
 
  [Figma design](https://www.figma.com/file/hIZveJVvWswVBHTnXTl8El/LeanyLabs-FrontEnd-Coding-Assignment?node-id=2%3A166)
- [Demo](http://localhost:3000/find_ip_tt)
+ </br>
+ [Demo](https://kandio16.github.io/find_ip_tt/)
