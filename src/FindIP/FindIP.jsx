@@ -1,21 +1,36 @@
 import React, { useState } from 'react';
 import { DetailsList } from '../DetailsList/DetailsList';
-
 import { getIP } from '../api/apiIP';
+
 import "./FindIP.css"
 
 export const FindIP = () => {
   const [ip, setIp] = useState('');
   const [details, setDetails] = useState(null);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false);
+
+  const errorMess = {
+    error: true,
+  }
 
   const findIp = (event) => {
-    setLoading(true)
+    setLoading(true);
     event.preventDefault();
+
+    if (ip === "") {
+      setLoading(false)
+
+      return;
+    }
+
     if (ip) {
       getIP(ip)
       .then((details) => {
         setDetails(details);
+        setLoading(false)
+      })
+      .catch(() => {
+        setDetails(errorMess)
         setLoading(false)
       })
     }
