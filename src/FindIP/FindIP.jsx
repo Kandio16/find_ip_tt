@@ -17,23 +17,17 @@ export const FindIP = () => {
     setLoading(true);
     event.preventDefault();
 
-    if (ip === "") {
+    getIP(ip)
+    .then((details) => {
+      setDetails(details);
+      setLoading(false);
+    })
+    .catch((error) => {
+      setDetails(errorMess)
       setLoading(false)
-
-      return;
-    }
-
-    if (ip) {
-      getIP(ip)
-      .then((details) => {
-        setDetails(details);
-        setLoading(false)
-      })
-      .catch(() => {
-        setDetails(errorMess)
-        setLoading(false)
-      })
-    }
+      throw error;
+    })
+    setIp('')
   }
 
   return (
